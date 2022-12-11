@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:wght@400;700&family=Staatliches&family=Tourney:wght@600&display=swap');
+
+.content-size {
+    width: 1440px;
+    margin: 0 auto;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "header header"
+        "aside main";
+    column-gap: 30px;
+    position: relative;
+}
+
+/* header */
+.header-position {
+    position: fixed;
+    width: 1200px;
+    z-index: 2;
+}
+
+.header {
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    grid-area: header;
+    background-color: #ffffff;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__select {
+    appearance: none;
+    font-family: 'Tourney', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+}
+
+.navigation {
+    margin-left: 50px;
+}
+
+.navigation__divider {
+    padding: 0 10px;
+}
+
+.navigation__item {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* main */
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.chapter__header {
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-top: 28px;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    width: 100px;
+    height: 8px;
+    background:#000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chapter__sup {
+    font-family: 'Farro', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    vertical-align: top;
+}
+
+.chapter__text {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    padding-top: 40px;
+}
+
+.chapter__text-underline {
+    text-decoration: underline;
+}
+
+.chapter__text-italic {
+    font-style: italic;
+}
+
+.chapter__text-bold {
+    font-weight: 700;
+}
+
+.chapter__text-fragment {
+    background-color: lightgray;
+}
+
+.chapter:last-of-type {
+    padding-bottom: 90px;
+}
+
+.aside {
+    grid-area: aside;
+    position: sticky;
+    top: 80px;
+    z-index: 1;
+    height: 462px;
+}
+
+.aside__list {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.aside__item {
+    box-sizing: border-box;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.aside-header {
+    padding-top: 0;
+}
+
+.hover:hover {
+    color: lightgray;
+}
+
+.main, .aside {
+    margin-top: 150px;
+}
+
+.bg-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.bg-image {
+    position: fixed;
+    z-index: -1;
+    top: 150px;
+}
+
+
+/* WHo's using */
+.container-using {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.using-position {
+    top:0;
+}
+
+.users {
+    padding-top: 150px;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.divider-line {
+    width: 100px;
+    height: 8px;
+    background-color: #000000;
+    margin-right: 10px;
+}
+
+.company {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    padding: 20px 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 30px
+}
+
+.company__logo {
+    width: 270px;
+    height: 180px;
+    border-radius: 8px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.company__logo-flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.company__logo:hover .company__logo-flip {
+    transform: rotateY(180deg);
+}
+
+.company__logo-flip-front, .company__logo-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.company__logo-flip-front {
+    background-color: #E6E6E6;
+}
+
+.company__logo-flip-back {
+    background-color: #1A1A1A;
+    transform: rotateY(180deg);
+}
+
+.company__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
