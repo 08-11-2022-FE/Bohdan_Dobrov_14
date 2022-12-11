@@ -158,6 +158,10 @@
     border-bottom: 1px solid #BDBDBD;
 }
 
+.aside-header {
+    padding-top: 0;
+}
+
 .hover:hover {
     color: lightgray;
 }
