@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="src/styles.css/reset.css" rel="stylesheet">
+        <link href="src/styles.css/style.css" rel="stylesheet">
+        <title>Web Fonts</title>
+    </head>
+    <body class="content-size">
+        <div class="bg-container">
+            <div class="bg-image">
+                <img src="src/images/bg-picture.svg" alt="background picture">
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-position">
+                <header class="header header-flex">
+                    <div class="header-flex">
+                        <select class="header__select" name="lang">
+                            <option value="en">eng</option>
+                            <option value="uk">uk</option>
+                        </select>
+                        <nav class="navigation header-flex">
+                            <p>
+                                <a class="navigation__item" href="index.html">Documentation</a>
+                            </p>
+                            <p class="navigation__divider">/</p>
+                            <p>
+                                <a class="navigation__item" href="using.html">Who's using</a>
+                            </p>
+                        </nav>
+                    </div>
+                    <img src="src/images/logo.svg" alt="logo">
+                </header>
+            </div>
+            <main class="main">
+                <div class="chapter">
+                    <h1 class="chapter__header divider" id="head">
+                        Introduction
+                        <sup class="chapter__sup">Chapter 1</sup>
+                    </h1>
+                    <p class="chapter__text">
+                        Welcome to the very start of your React Native journey!
+                        If you're looking for environment setup instructions,
+                        they've moved to <span class="chapter__text-underline">their own section</span>.
+                        Continue reading for an introduction to the documentation,
+                        Native Components, React, and more!
+                    </p>
+                </div>
+                <div class="chapter">
+                    <h2 class="chapter__header divider" id="core">
+                        Core components
+                        <sup class="chapter__sup">Chapter 2</sup>
+                    </h2>
+                    <p class="chapter__text">
+                        React Native is an open source framework for building
+                        Android and iOS applications using React and the app
+                        platform’s native capabiles. With React Native, you use
+                        JavaScript to access your platform’s APIs as well as to describe
+                        the appearance and behavior of your UI using React components:
+                        <span class="chapter__text-italic">bundles of reusable, nestable code</span>.
+                        You can learn more about React in the next section. But first, let’s cover how
+                        components work in React Native.
+                    </p>
+                </div>
+                <div class="chapter">
+                    <h2 class="chapter__header divider" id="react">
+                        React fundamentals
+                        <sup class="chapter__sup">Chapter 3</sup>
+                    </h2>
+                    <p class="chapter__text">
+                        React Native runs on <span class="chapter__text-underline">React</span>,
+                        a popular open source library for building user interfaces with JavaScript.
+                        To make the most of React Native, it helps to understand React itself.
+                        This section can get you started or can serve as a refresher course.
+                    </p>
+                    <p class="chapter__text">
+                        We’re going to cover the core concepts behind React:
+                    </p>
+                    <p class="chapter__text">
+                        <span class="chapter__text-bold">+ components.</span>
+                        The rest of this introduction to React uses cats in its examples:
+                        friendly, approachable creatures that need names and a cafe to work in.
+                    </p>
+                    <p class="chapter__text">
+                        <span class="chapter__text-bold">+ JSX</span>. React and
+                        React Native use JSX, a syntax that lets you write elements
+                        inside JavaScript like so:
+                        <code class="chapter__text-fragment">&lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;</code>.
+                    </p>
+                    <p class="chapter__text">
+                        The React docs have <span class="chapter__text-underline">a comprehensive guide to JSX</span>
+                        you can refer to learn even more. Because JSX is JavaScript,
+                        you can use variables inside it. Here you are declaring a
+                        <code class="chapter__text-fragment">name</code>
+                        for the cat, name, and embedding it with curly braces inside
+                        <code class="chapter__text-fragment">&lt;Text&gt;</code>
+                    </p>
+                    <p class="chapter__text">
+                        <span class="chapter__text-bold">+ props.</span>
+                        Props is short for “properties”. 
+                    </p>
+                    <p class="chapter__text">
+                        <span class="chapter__text-bold">+ state.</span>
+                        While you can think of props as arguments you use to
+                        configure how components render, state is like a component’s
+                        personal data storage. State is useful for handling data that
+                        changes over time or that comes from user interaction.
+                        State gives your components memory!
+                    </p>
+                </div>
+                <div class="chapter">
+                    <h2 class="chapter__header divider" id="text">
+                        Handling text input
+                        <sup class="chapter__sup">Chapter 4</sup>
+                    </h2>
+                    <p class="chapter__text">
+                        TextInput is a Core Component that allows the user
+                        to enter text. It has an <span class="chapter__text-italic">onChangeText</span>
+                        prop that takes a function to be called every time the text
+                        changed, and an onSubmitEditing prop that takes a function to
+                        be called when the text is submitted.
+                    </p>
+                    <p class="chapter__text">
+                        For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be translated as "🍕 🍕".
+                    </p>
+                </div>
+            </main>
+            <aside class="aside">
+                <nav class="aside__navigation chapter__header">
+                    <ul class="aside__list">
+                        <li class="aside__item">
+                            <a class="navigation__item hover" href="#head">Introduction</a>
+                        </li>
+                        <li class="aside__item">
+                            <a class="navigation__item hover" href="#core">Core components</a>
+                        </li>
+                        <li class="aside__item">
+                            <a class="navigation__item hover" href="#react">React fundamentals</a>
+                        </li>
+                        <li class="aside__item">
+                            <a class="navigation__item hover" href="#text">Handling text input</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </body>
+</html>
